@@ -1,0 +1,685 @@
+:root {
+    --forest: #073d2d;
+    --forest2: #0b503d;
+    --green: #0a3d2e;
+    --green-2: #083324;
+    --cream: #f3eee2;
+    --paper: #faf7ef;
+    --orange: #d46a3b;
+    --rust: #b7471e;
+    --ink: #1d271f;
+    --muted: #68706a;
+    --line: rgba(10, 61, 46, 0.14);
+    --white: #ffffff;
+    --shadow: 0 18px 50px rgba(10, 61, 46, 0.10);
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+input,
+textarea,
+select {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -webkit-user-drag: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+    color: var(--forest);
+    line-height: 1.15;
+}
+
+/* =========================================================
+   ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement-bar {
+    background: var(--rust);
+    color: #fff8ef;
+    font-size: .75rem;
+    letter-spacing: .04em;
+    padding: .38rem 0;
+}
+
+.announcement-right {
+    opacity: .85;
+}
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+.site-header {
+    background: rgba(10, 61, 46, .97);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+}
+
+.navbar {
+    background: transparent;
+}
+
+.navbar-brand {
+    color: #f8f2e6 !important;
+    line-height: 1;
+}
+
+.navbar-brand strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+}
+
+.navbar-brand small {
+    display: block;
+    margin-top: 3px;
+
+    font-size: .55rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    opacity: .7;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 50%;
+
+    font-size: .62rem;
+    letter-spacing: .08em;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, .78) !important;
+
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+
+    padding: .65rem .55rem !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+}
+
+.nav-actions .icon-btn {
+    width: 38px;
+    height: 38px;
+
+    position: relative;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.cart-btn span {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+
+    min-width: 15px;
+    height: 15px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--rust);
+    color: #fff;
+
+    font-size: .56rem;
+}
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#cartCount {
+    position: absolute;
+    top: -4px;
+    right: -3px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+    background: var(--forest);
+    padding: 5.8rem 0 5.2rem;
+}
+
+.page-hero .container {
+    max-width: 920px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--cream);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    letter-spacing: -0.02em;
+}
+
+.page-hero p {
+    max-width: 780px;
+    color: rgba(255, 255, 255, 0.76);
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section-shell {
+    padding: 5.5rem 0;
+    background: var(--paper);
+}
+
+.light-section {
+    background: var(--cream);
+}
+
+/* =========================================================
+   JOB CARDS
+========================================================= */
+
+.job-card {
+    height: 100%;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 60px rgba(10, 61, 46, 0.14);
+}
+
+.job-card h3 {
+    font-size: 1.7rem;
+}
+
+.job-card p {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    max-width: 600px;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.42rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(212, 106, 59, 0.11);
+    color: var(--rust);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn-dark-green {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.3rem;
+    border: 1px solid var(--forest);
+    border-radius: 999px;
+    background: var(--forest);
+    color: var(--white);
+    font-weight: 700;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-dark-green:hover,
+.btn-dark-green:focus {
+    background: var(--forest2);
+    border-color: var(--forest2);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   QUOTE CARD
+========================================================= */
+
+.quote-card {
+    background: var(--forest);
+    color: var(--white);
+    border-radius: 22px;
+    padding: 2.4rem;
+    box-shadow: var(--shadow);
+}
+
+.quote-card .eyebrow {
+    color: var(--cream);
+}
+
+.quote-card p {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.25rem, 2vw, 1.6rem);
+    line-height: 1.6;
+}
+
+/* =========================================================
+   SEARCH MODAL
+========================================================= */
+
+.search-modal {
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(10, 61, 46, 0.20);
+}
+
+.search-modal .modal-title {
+    color: var(--forest);
+    font-size: 1.5rem;
+}
+
+.search-input {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.search-input:focus {
+    border-color: var(--forest2);
+    box-shadow: 0 0 0 0.2rem rgba(10, 61, 46, 0.08);
+}
+
+.search-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.search-hints button {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--forest);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-canvas {
+    width: min(430px, 100%);
+    background: var(--paper);
+}
+
+.cart-canvas .offcanvas-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-canvas .offcanvas-header h5 {
+    color: var(--forest);
+    font-size: 1.4rem;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.empty-cart {
+    padding: 1rem;
+    border: 1px dashed var(--line);
+    border-radius: 14px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--green-2);
+    color: rgba(255, 255, 255, 0.78);
+    padding: 4.5rem 0 1.5rem;
+}
+
+.site-footer h5 {
+    margin-bottom: 1rem;
+    color: var(--cream);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.site-footer p {
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--white);
+}
+
+.footer-brand strong {
+    color: var(--white);
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+}
+
+.footer-brand .brand-mark {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    font-size: 1.05rem;
+}
+
+.social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.social-links a {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 24px;
+
+    transition: all .25s ease;
+}
+
+.social-links a:hover {
+    border-color: #f2dcb8;
+    background: #f2dcb8;
+    color: #0a3d2e;
+
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--cream);
+}
+
+.text-link {
+    color: var(--cream);
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 0.8rem;
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    background: var(--forest);
+    color: var(--white);
+}
+
+.toast .toast-body {
+    color: var(--white);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+
+    .nav-actions {
+        padding-bottom: 0.7rem;
+    }
+
+    .page-hero {
+        padding: 5rem 0 4.5rem;
+    }
+
+    .section-shell {
+        padding: 4.5rem 0;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .announcement-bar {
+        padding: 0.55rem 0;
+        font-size: 0.72rem;
+    }
+
+    .announcement-bar .container {
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .announcement-right {
+        display: none;
+    }
+
+    .navbar-brand small {
+        font-size: 0.58rem;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 1rem;
+    }
+
+    .page-hero {
+        padding: 4rem 0 3.7rem;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2.35rem, 10vw, 3.5rem);
+    }
+
+    .page-hero p {
+        font-size: 1rem !important;
+    }
+
+    .section-shell {
+        padding: 4rem 0;
+    }
+
+    .job-card {
+        padding: 1.6rem;
+        border-radius: 18px;
+    }
+
+    .job-card h3 {
+        font-size: 1.45rem;
+    }
+
+    .btn-dark-green {
+        width: 100%;
+    }
+
+    .quote-card {
+        padding: 1.7rem;
+        border-radius: 18px;
+    }
+
+    .quote-card p {
+        font-size: 1.15rem;
+    }
+
+    .site-footer {
+        padding-top: 3.5rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page-hero {
+        padding: 3.4rem 0 3.2rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-shell {
+        padding: 3.3rem 0;
+    }
+
+    .job-card {
+        padding: 1.35rem;
+    }
+
+    .quote-card {
+        padding: 1.35rem;
+    }
+
+    .quote-card p {
+        font-size: 1.05rem;
+    }
+
+    .site-footer {
+        padding-top: 3rem;
+    }
+}

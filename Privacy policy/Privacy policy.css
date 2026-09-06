@@ -1,0 +1,789 @@
+:root {
+    --forest: #073d2d;
+    --forest2: #0b503d;
+    --green: #0a3d2e;
+    --green-2: #083324;
+    --cream: #f3eee2;
+    --paper: #faf7ef;
+    --orange: #d46a3b;
+    --rust: #b7471e;
+    --ink: #1d271f;
+    --muted: #68706a;
+    --line: rgba(10, 61, 46, 0.14);
+    --white: #ffffff;
+    --shadow: 0 18px 50px rgba(10, 61, 46, 0.10);
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+input,
+textarea,
+select {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -webkit-user-drag: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.15;
+}
+
+/* =========================================================
+   ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement-bar {
+    background: var(--rust);
+    color: #fff8ef;
+    font-size: .75rem;
+    letter-spacing: .04em;
+    padding: .38rem 0;
+}
+
+.announcement-right {
+    opacity: .85;
+}
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+.site-header {
+    background: rgba(10, 61, 46, .97);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+}
+
+.navbar {
+    background: transparent;
+}
+
+.navbar-brand {
+    color: #f8f2e6 !important;
+    line-height: 1;
+}
+
+.navbar-brand strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+}
+
+.navbar-brand small {
+    display: block;
+    margin-top: 3px;
+
+    font-size: .55rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    opacity: .7;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 50%;
+
+    font-size: .62rem;
+    letter-spacing: .08em;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, .78) !important;
+
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+
+    padding: .65rem .55rem !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+}
+
+.nav-actions .icon-btn {
+    width: 38px;
+    height: 38px;
+
+    position: relative;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.cart-btn span {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+
+    min-width: 15px;
+    height: 15px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--rust);
+    color: #fff;
+
+    font-size: .56rem;
+};
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#cartCount {
+    position: absolute;
+    top: -4px;
+    right: -3px;
+
+    min-width: 19px;
+    height: 19px;
+    padding: 0 4px;
+
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--white);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+    background: var(--forest);
+    padding: 5.8rem 0 5.2rem;
+}
+
+.page-hero .container {
+    max-width: 1200px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--cream);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    margin-bottom: 0;
+    color: var(--white);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    letter-spacing: -0.02em;
+}
+
+.page-hero p {
+    max-width: 720px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+/* =========================================================
+   PRIVACY SECTION
+========================================================= */
+
+.privacy-section {
+    background: var(--paper);
+    padding: 5rem 0 6rem;
+}
+
+.privacy-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   PRIVACY INTRO
+========================================================= */
+
+.privacy-intro {
+    background: var(--green);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.privacy-date {
+    margin-bottom: 0.75rem;
+
+    color: #d9c49b;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.privacy-intro p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.84rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   PRIVACY CARDS
+========================================================= */
+
+.privacy-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 2rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 6px 22px rgba(10, 61, 46, 0.04);
+}
+
+.privacy-number {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 1rem;
+
+    border-radius: 50%;
+    background: #efe5d1;
+    color: var(--green);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.privacy-card h2 {
+    margin-bottom: 0.9rem;
+    color: var(--green);
+    font-family: "Playfair Display", serif;
+    font-size: 1.65rem;
+}
+
+.privacy-card h3 {
+    margin: 1.2rem 0 0.5rem;
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.privacy-card p {
+    margin-bottom: 0.8rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+.privacy-card p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-card ul {
+    margin: 0.8rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.privacy-card li {
+    margin-bottom: 0.35rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.75;
+}
+
+.privacy-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   PRIVACY HIGHLIGHT
+========================================================= */
+
+.privacy-highlight {
+    background: #f0e8d9;
+    border-left: 4px solid var(--rust);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+}
+
+.privacy-highlight p {
+    margin: 0;
+    color: var(--green);
+    font-weight: 600;
+}
+
+/* =========================================================
+   PRIVACY CONTACT
+========================================================= */
+
+.privacy-contact {
+    background: var(--green-2);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 2.2rem;
+    margin-top: 2rem;
+}
+
+.privacy-contact h2 {
+    margin-bottom: 0.8rem;
+    color: var(--white);
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+}
+
+.privacy-contact p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+.privacy-contact a {
+    color: #f2dcb8;
+    font-weight: 700;
+}
+
+.privacy-contact a:hover {
+    color: var(--white);
+}
+
+/* =========================================================
+   SEARCH MODAL
+========================================================= */
+
+.search-modal {
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(10, 61, 46, 0.20);
+}
+
+.search-modal .modal-title {
+    color: var(--forest);
+    font-size: 1.5rem;
+}
+
+.search-input {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.search-input:focus {
+    border-color: var(--forest2);
+    box-shadow: 0 0 0 0.2rem rgba(10, 61, 46, 0.08);
+}
+
+.search-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.search-hints button {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--forest);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-canvas {
+    width: min(430px, 100%);
+    background: var(--paper);
+}
+
+.cart-canvas .offcanvas-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-canvas .offcanvas-header h5 {
+    color: var(--forest);
+    font-size: 1.4rem;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.empty-cart {
+    padding: 1rem;
+    border: 1px dashed var(--line);
+    border-radius: 14px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.btn-dark-green {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.8rem 1.25rem;
+    border: 1px solid var(--forest);
+    border-radius: 999px;
+
+    background: var(--forest);
+    color: var(--white);
+
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.btn-dark-green:hover,
+.btn-dark-green:focus {
+    background: var(--forest2);
+    border-color: var(--forest2);
+    color: var(--white);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--green-2);
+    color: rgba(255, 255, 255, 0.78);
+    padding: 4.5rem 0 1.5rem;
+}
+
+.site-footer h5 {
+    margin-bottom: 1rem;
+    color: var(--cream);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.site-footer p {
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--white);
+}
+
+.footer-brand strong {
+    color: var(--white);
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+}
+
+.footer-brand .brand-mark {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    font-size: 1.05rem;
+}
+
+.social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.social-links a {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 24px;
+
+    transition: all .25s ease;
+}
+
+.social-links a:hover {
+    border-color: #f2dcb8;
+    background: #f2dcb8;
+    color: #0a3d2e;
+
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--cream);
+}
+
+.site-footer .text-link {
+    color: var(--cream);
+    font-weight: 700;
+}
+
+.site-footer .text-link:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 0.8rem;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+
+    .nav-actions {
+        padding-bottom: 0.7rem;
+    }
+
+    .page-hero {
+        padding: 5rem 0 4.5rem;
+    }
+
+    .privacy-section {
+        padding: 4.5rem 0 5rem;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .announcement-bar {
+        padding: 0.55rem 0;
+        font-size: 0.72rem;
+    }
+
+    .announcement-bar .container {
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .announcement-right {
+        display: none;
+    }
+
+    .navbar-brand small {
+        font-size: 0.58rem;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 1rem;
+    }
+
+    .page-hero {
+        padding: 4rem 0 3.7rem;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2.35rem, 10vw, 3.5rem);
+    }
+
+    .page-hero p {
+        font-size: 1rem;
+    }
+
+    .privacy-section {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .privacy-container {
+        max-width: 100%;
+    }
+
+    .privacy-intro,
+    .privacy-card,
+    .privacy-contact {
+        padding: 1.4rem;
+        border-radius: 18px;
+    }
+
+    .privacy-intro {
+        margin-bottom: 1.2rem;
+    }
+
+    .privacy-card {
+        margin-bottom: 1rem;
+    }
+
+    .privacy-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .privacy-card h3 {
+        font-size: 0.86rem;
+    }
+
+    .privacy-card p,
+    .privacy-card li {
+        font-size: 0.78rem;
+    }
+
+    .privacy-intro p,
+    .privacy-contact p {
+        font-size: 0.78rem;
+    }
+
+    .privacy-contact {
+        margin-top: 1.4rem;
+    }
+
+    .privacy-contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-dark-green {
+        width: 100%;
+    }
+
+    .site-footer {
+        padding-top: 3.5rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page-hero {
+        padding: 3.4rem 0 3.2rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .privacy-section {
+        padding: 3rem 0 3.5rem;
+    }
+
+    .privacy-intro,
+    .privacy-card,
+    .privacy-contact {
+        padding: 1.2rem;
+    }
+
+    .privacy-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .privacy-card p,
+    .privacy-card li,
+    .privacy-contact p {
+        font-size: 0.76rem;
+    }
+
+    .privacy-contact h2 {
+        font-size: 1.4rem;
+    }
+
+    .site-footer {
+        padding-top: 3rem;
+    }
+}
