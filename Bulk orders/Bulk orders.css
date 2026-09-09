@@ -208,34 +208,46 @@ h6 {
 ========================================================= */
 
 .page-hero {
-    background: var(--forest);
-    padding: 5.8rem 0 5.2rem;
-}
+    background: var(--green);
+    color: #fff;
 
-.page-hero .container {
-    max-width: 920px;
-}
-
-.eyebrow {
-    display: inline-block;
-    color: var(--cream);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    padding: 7rem 0 4.5rem;
 }
 
 .page-hero h1 {
-    color: var(--white);
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    letter-spacing: -0.02em;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    color: #ffffff !important;
 }
 
 .page-hero p {
-    max-width: 780px;
-    color: rgba(255, 255, 255, 0.76);
-    margin-bottom: 0;
+    max-width: 720px;
+
+    color: rgba(255, 255, 255, .7);
 }
+
+/* =========================================================
+   COMMON EYEBROW
+========================================================= */
+
+.eyebrow {
+    font-size: .63rem;
+    font-weight: 800;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+
+    opacity: .7;
+}
+
+.eyebrow.dark {
+    color: var(--green);
+    opacity: .65;
+}
+
+
 
 /* =========================================================
    SECTIONS
@@ -768,5 +780,46 @@ h6 {
 
     .site-footer {
         padding-top: 3rem;
+    }
+}
+/* =========================
+   SAME HERO HEIGHT ON ALL PAGES
+========================= */
+
+.page-hero {
+    height: 420px !important;
+    min-height: 420px !important;
+
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+}
+
+.page-hero .container {
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+    .page-hero {
+        height: 400px !important;
+        min-height: 400px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .page-hero {
+        height: 360px !important;
+        min-height: 360px !important;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .page-hero {
+        height: 340px !important;
+        min-height: 340px !important;
     }
 }

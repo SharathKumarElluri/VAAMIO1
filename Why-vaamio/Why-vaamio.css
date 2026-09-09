@@ -1109,3 +1109,44 @@ select,
         font-size: .55rem;
     }
 }
+/* =========================
+   SAME HERO HEIGHT ON ALL PAGES
+========================= */
+
+.page-hero {
+    height: 420px !important;
+    min-height: 420px !important;
+
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+}
+
+.page-hero .container {
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+    .page-hero {
+        height: 400px !important;
+        min-height: 400px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .page-hero {
+        height: 360px !important;
+        min-height: 360px !important;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .page-hero {
+        height: 340px !important;
+        min-height: 340px !important;
+    }
+}
