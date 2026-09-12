@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <title>VAAMIO | Admin Panel</title>
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ADMIN CSS -->
+
+    <link
+        rel="stylesheet"
+        href="admin-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE HEADER
+===================================================== -->
+
+<header class="admin-mobile-header d-lg-none">
+
+   <button
+    class="admin-menu-btn"
+    id="adminMenuBtn"
+    type="button"
+    aria-label="Open admin menu"
+    title="Open admin menu">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="admin-mobile-logo">
+
+        <strong>
+            VAAMIO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+    class="admin-mobile-notification"
+    type="button"
+    aria-label="View notifications"
+    title="View notifications">
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            3
+        </span>
+
+    </button>
+
+</header>
+
+
+<!-- =====================================================
+     OVERLAY
+===================================================== -->
+
+<div class="admin-overlay"
+     id="adminOverlay">
+</div>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="admin-sidebar"
+       id="adminSidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="admin-logo">
+
+        <strong>
+            VAAMIO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <!-- ADMIN -->
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAV -->
+
+    <nav class="admin-nav">
+
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link active">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- SALES -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                12
+            </b>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>
+                Refunds
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- CATALOG -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-box"></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-warehouse"></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- CUSTOMERS -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-regular fa-star"></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-regular fa-comments"></i>
+
+            <span>
+                Support
+            </span>
+
+        </a>
+
+
+        <!-- MARKETING -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-ticket"></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-regular fa-image"></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- BUSINESS -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-handshake"></i>
+
+            <span>
+                Bulk Orders
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-store"></i>
+
+            <span>
+                Distributor
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- REPORTS -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <!-- SYSTEM -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span>
+                Staff & Roles
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-file-shield"></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider">
+        </div>
+
+
+        <a href="../home.html"
+           class="admin-nav-link">
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <a href="#"
+           class="admin-nav-link admin-logout">
+
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </a>
+
+
+    </nav>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="admin-main">
+
+
+    <!-- DESKTOP TOPBAR -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="adminSearch"
+                placeholder="Search orders, products, customers...">
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button class="admin-top-icon">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    3
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="admin-content">
+
+
+        <!-- WELCOME -->
+
+        <section class="admin-welcome">
+
+            <div>
+
+                <span>
+                    VAAMIO MANAGEMENT
+                </span>
+
+                <h1>
+                    Dashboard 👋
+                </h1>
+
+                <p>
+                    Here's what's happening with your VAAMIO store today.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                September 12, 2026
+
+            </div>
+
+        </section>
+
+
+        <!-- STAT CARDS -->
+
+        <div class="row g-3">
+
+
+            <div class="col-6 col-xl-3">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Revenue
+                        </span>
+
+                        <strong>
+                            ₹2,48,900
+                        </strong>
+
+                        <small>
+                            ↑ 18.4% from last month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Orders
+                        </span>
+
+                        <strong>
+                            1,248
+                        </strong>
+
+                        <small>
+                            ↑ 12.2% from last month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Customers
+                        </span>
+
+                        <strong>
+                            843
+                        </strong>
+
+                        <small>
+                            ↑ 9.7% from last month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-box"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Products
+                        </span>
+
+                        <strong>
+                            36
+                        </strong>
+
+                        <small>
+                            ↑ 4.2% from last month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SALES + PRODUCTS -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- SALES -->
+
+            <div class="col-xl-8">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                BUSINESS PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Sales Overview
+                            </h2>
+
+                        </div>
+
+
+                        <label for="salesRange" class="visually-hidden">
+    Sales date range
+</label>
+
+<select
+    id="salesRange"
+    aria-label="Sales date range">
+
+    <option>Last 7 Days</option>
+    <option>Last 30 Days</option>
+    <option>Last 6 Months</option>
+    <option>This Year</option>
+
+</select>
+
+                    </div>
+
+
+                    <div class="sales-chart">
+
+                        <div class="chart-labels">
+
+                            <span>
+                                ₹1,00,000
+                            </span>
+
+                            <span>
+                                ₹75,000
+                            </span>
+
+                            <span>
+                                ₹50,000
+                            </span>
+
+                            <span>
+                                ₹25,000
+                            </span>
+
+                            <span>
+                                ₹0
+                            </span>
+
+                        </div>
+
+
+                        <div class="chart">
+
+                            <div class="chart-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <svg
+                                viewBox="0 0 700 260"
+                                preserveAspectRatio="none">
+
+                                <defs>
+
+                                    <linearGradient
+                                        id="fillArea"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="1">
+
+                                        <stop
+                                            offset="0%"
+                                            stop-opacity=".25">
+
+                                        </stop>
+
+                                        <stop
+                                            offset="100%"
+                                            stop-opacity="0">
+
+                                        </stop>
+
+                                    </linearGradient>
+
+                                </defs>
+
+
+                                <path
+                                    class="area"
+                                    d="
+                                    M0,220
+                                    C70,200 95,175 150,170
+                                    C205,165 215,140 270,147
+                                    C330,154 345,120 400,130
+                                    C455,140 460,80 520,96
+                                    C580,110 590,67 700,50
+                                    L700,260
+                                    L0,260
+                                    Z">
+
+                                </path>
+
+
+                                <path
+                                    class="line"
+                                    d="
+                                    M0,220
+                                    C70,200 95,175 150,170
+                                    C205,165 215,140 270,147
+                                    C330,154 345,120 400,130
+                                    C455,140 460,80 520,96
+                                    C580,110 590,67 700,50">
+
+                                </path>
+
+                            </svg>
+
+
+                            <div class="chart-days">
+
+                                <span>
+                                    12 Sep
+                                </span>
+
+                                <span>
+                                    13 Sep
+                                </span>
+
+                                <span>
+                                    14 Sep
+                                </span>
+
+                                <span>
+                                    15 Sep
+                                </span>
+
+                                <span>
+                                    16 Sep
+                                </span>
+
+                                <span>
+                                    17 Sep
+                                </span>
+
+                                <span>
+                                    18 Sep
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- TOP PRODUCTS -->
+
+            <div class="col-xl-4">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                BEST SELLERS
+                            </span>
+
+                            <h2>
+                                Top Products
+                            </h2>
+
+                        </div>
+
+                        <a href="#">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="top-products">
+
+
+                        <div class="top-product">
+
+                            <img
+                                src="../images/Chickenpickle1.png"
+                                alt="Chicken Pickle">
+
+                            <div>
+
+                                <strong>
+                                    Andhra Chicken Pickle
+                                </strong>
+
+                                <small>
+                                    428 sold
+                                </small>
+
+                                <div class="progress-bar">
+
+                                    <span class="progress-92"></span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="top-product">
+
+                            <img
+                                src="../images/prawnpickle.png"
+                                alt="Prawn Pickle">
+
+                            <div>
+
+                                <strong>
+                                    Prawn Pickle
+                                </strong>
+
+                                <small>
+                                    312 sold
+                                </small>
+
+                                <div class="progress-bar">
+
+                                    <span class="progress-75"></span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="top-product">
+
+                            <img
+                                src="../images/mutton pickle.png"
+                                alt="Mutton Pickle">
+
+                            <div>
+
+                                <strong>
+                                    Mutton Pickle
+                                </strong>
+
+                                <small>
+                                    267 sold
+                                </small>
+
+                                <div class="progress-bar">
+
+                                    <span class="progress-64"></span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="top-product">
+
+                            <img
+                                src="../images/prawnpickle.png"
+                                alt="Fish Pickle">
+
+                            <div>
+
+                                <strong>
+                                    Fish Pickle
+                                </strong>
+
+                                <small>
+                                    169 sold
+                                </small>
+
+                                <div class="progress-bar">
+
+                                    <span class="progress-42"></span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORDERS + QUICK ACTIONS -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- ORDERS -->
+
+            <div class="col-xl-8">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                SALES
+                            </span>
+
+                            <h2>
+                                Recent Orders
+                            </h2>
+
+                        </div>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Order
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            #VAAM1024
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Rahul Kumar
+                                    </td>
+
+                                    <td>
+                                        ₹899
+                                    </td>
+
+                                    <td>
+
+                                        <span class="order-status processing">
+                                            Processing
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        12 Sep
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            class="admin-view-btn">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            #VAAM1023
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Priya Sharma
+                                    </td>
+
+                                    <td>
+                                        ₹598
+                                    </td>
+
+                                    <td>
+
+                                        <span class="order-status shipped">
+                                            Shipped
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        11 Sep
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            class="admin-view-btn">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            #VAAM1022
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Arjun Reddy
+                                    </td>
+
+                                    <td>
+                                        ₹329
+                                    </td>
+
+                                    <td>
+
+                                        <span class="order-status delivered">
+                                            Delivered
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        10 Sep
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            class="admin-view-btn">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            #VAAM1021
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Sneha Patel
+                                    </td>
+
+                                    <td>
+                                        ₹1,299
+                                    </td>
+
+                                    <td>
+
+                                        <span class="order-status delivered">
+                                            Delivered
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        09 Sep
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            class="admin-view-btn">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="col-xl-4">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                MANAGEMENT
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <button class="quick-action">
+
+                            <span class="quick-icon green">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+
+                            <strong>
+                                Add Product
+                            </strong>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+
+                        <button class="quick-action">
+
+                            <span class="quick-icon orange">
+                                <i class="fa-solid fa-box"></i>
+                            </span>
+
+                            <strong>
+                                Manage Orders
+                            </strong>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+
+                        <button class="quick-action">
+
+                            <span class="quick-icon blue">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+
+                            <strong>
+                                View Customers
+                            </strong>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+
+                        <button class="quick-action">
+
+                            <span class="quick-icon purple">
+                                <i class="fa-solid fa-file"></i>
+                            </span>
+
+                            <strong>
+                                Generate Report
+                            </strong>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOW STOCK -->
+
+        <section class="admin-card mt-4">
+
+            <div class="admin-card-header">
+
+                <div>
+
+                    <span>
+                        INVENTORY
+                    </span>
+
+                    <h2>
+                        Low Stock Alerts
+                    </h2>
+
+                </div>
+
+                <a href="#">
+                    Manage Inventory →
+                </a>
+
+            </div>
+
+
+            <div class="low-stock-grid">
+
+
+                <div class="stock-card">
+
+                    <img
+                        src="../images/prawnpickle.png"
+                        alt="Prawn Pickle">
+
+                    <div>
+
+                        <strong>
+                            Prawn Pickle
+                        </strong>
+
+                        <small>
+                            8 units remaining
+                        </small>
+
+                    </div>
+
+                    <span>
+                        LOW
+                    </span>
+
+                </div>
+
+
+                <div class="stock-card">
+
+                    <img
+                        src="../images/mutton pickle.png"
+                        alt="Mutton Pickle">
+
+                    <div>
+
+                        <strong>
+                            Mutton Pickle
+                        </strong>
+
+                        <small>
+                            12 units remaining
+                        </small>
+
+                    </div>
+
+                    <span>
+                        LOW
+                    </span>
+
+                </div>
+
+
+                <div class="stock-card">
+
+                    <img
+                        src="../images/Chickenpickle1.png"
+                        alt="Chicken Pickle">
+
+                    <div>
+
+                        <strong>
+                            Chicken Pickle
+                        </strong>
+
+                        <small>
+                            18 units remaining
+                        </small>
+
+                    </div>
+
+                    <span>
+                        LOW
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- ADMIN JS -->
+
+<script src="admin-dashboard.js"></script>
+
+</body>
+</html>
