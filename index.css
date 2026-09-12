@@ -57,12 +57,12 @@ input,
 textarea,
 select,
 [contenteditable="true"] {
-    user-select: text !important;
-    -webkit-user-select: text !important;
-    -moz-user-select: text !important;
-    -ms-user-select: text !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-    -webkit-user-drag: auto !important;
+  
 }
 
 a {
@@ -74,7 +74,10 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 button,
@@ -114,6 +117,7 @@ a,
 .site-header {
     background: rgba(10, 61, 46, .97);
 
+    -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
 
     box-shadow:
@@ -162,8 +166,15 @@ a,
     letter-spacing: .08em;
 }
 
+/* =========================================================
+   NAVBAR LINK + SLIDING UNDERLINE
+========================================================= */
+
 .nav-link {
     position: relative;
+
+    display: inline-block !important;
+    width: fit-content !important;
 
     color: rgba(255, 255, 255, .78) !important;
 
@@ -176,15 +187,18 @@ a,
     transition: color .25s ease;
 }
 
+
+/* underline matches ONLY the text width */
+
 .nav-link::after {
     content: "";
 
     position: absolute;
 
     left: .55rem;
-    right: .55rem;
     bottom: .25rem;
 
+    width: calc(100% - 1.1rem);
     height: 2px;
 
     background: #f2dcb8;
@@ -195,6 +209,9 @@ a,
     transition:
         transform .35s cubic-bezier(.65, 0, .35, 1);
 }
+
+
+/* hover */
 
 .nav-link:hover {
     color: #f2dcb8 !important;
@@ -1836,19 +1853,14 @@ a.view-all-products:hover {
     }
 
     .nav-link {
-        display: block;
+    display: inline-block !important;
+    width: fit-content !important;
 
-        padding: .65rem 0 !important;
+    padding: .65rem 0 !important;
 
-        border-bottom: 1px solid rgba(255, 255, 255, .07);
-    }
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
 
-    .nav-link::after {
-        left: 0;
-        right: auto;
-
-        width: 70px;
-    }
 
     .nav-actions {
         width: 100%;
@@ -2511,4 +2523,8 @@ a.view-all-products:hover {
     .footer-bottom {
         font-size: .55rem;
     }
+}
+.products-eyebrow {
+    font-size: 30px;
+    font-weight: 700;
 }

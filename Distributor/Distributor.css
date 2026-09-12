@@ -30,22 +30,26 @@ body {
     font-family: "DM Sans", sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    user-select: none;
     -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 input,
 textarea,
 select {
-    user-select: text;
-    -webkit-user-select: text;
+    -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    -webkit-user-drag: none;
+
 }
 
 a {
@@ -89,7 +93,8 @@ h6 {
 
 .site-header {
     background: rgba(10, 61, 46, .97);
-    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(12px);
+     backdrop-filter: blur(12px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
 }
 
@@ -504,6 +509,8 @@ h6 {
 .cart-canvas .offcanvas-header h5 {
     color: var(--forest);
     font-size: 1.4rem;
+    font-family: "DM Sans", sans-serif !important;
+    font-weight: 500;
 }
 
 .cart-items {
