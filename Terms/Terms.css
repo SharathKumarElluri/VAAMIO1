@@ -31,24 +31,28 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 
-    user-select: none;
-    -webkit-user-select: none;
+   -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 input,
 textarea,
 select {
-    user-select: text;
-    -webkit-user-select: text;
+    -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 img {
     display: block;
     max-width: 100%;
     height: auto;
-    -webkit-user-drag: none;
+   -webkit-user-select: none;
+user-select: none;
 }
-
 a {
     text-decoration: none;
 }
@@ -88,7 +92,8 @@ h6 {
 
 .site-header {
     background: rgba(10, 61, 46, .97);
-    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
 }
 
